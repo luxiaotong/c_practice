@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "my_util.h"
 
 void parray(int *array, int len)
@@ -9,5 +8,17 @@ void parray(int *array, int len)
     }
     printf("\n");
     
+    return;
+}
+
+void timeval_sub(struct timeval *out, struct timeval *in)
+{       
+    if( (out->tv_usec -= in->tv_usec) < 0 )
+    {   
+        --out->tv_sec;
+        out->tv_usec += 1000000;
+    }
+    out->tv_sec -= in->tv_sec;
+
     return;
 }
