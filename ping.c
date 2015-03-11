@@ -12,18 +12,21 @@ void send_icmp(int sockfd, char *host_str)
     to_addr.sin_family  = AF_INET;
     inet_aton(host_str, &to_addr.sin_addr);
 
-    icmp_ptr->icmp_type     = ICMP_ECHOREPLY;
-    icmp_ptr->icmp_code     = 0;
-    icmp_ptr->icmp_cksum    = 0;
-    icmp_ptr->icmp_id       = getpid();
 
     int i = 0;
     for ( i = 0; i < MAX_REQUEST_COUNT; i ++ ) {
-        icmp_ptr->icmp_seq  = i;
+        memset(send_buff, 0, sizeof(send_buff));
+        icmp_ptr->icmp_type     = ICMP_ECHOREPLY;
+        icmp_ptr->icmp_code     = 0;
+        icmp_ptr->icmp_id       = getpid();
+        icmp_ptr->icmp_cksum    = 0;
+        icmp_ptr->icmp_seq      = i;
+
         gettimeofday(time_ptr, NULL);
         printf("id: %d\tseq: %d\n", icmp_ptr->icmp_id, icmp_ptr->icmp_seq);
         //Todo: we should assign 64 to a parameter.
         icmp_ptr->icmp_cksum= checksum((unsigned short *)icmp_ptr, 64);
+        //printf("cksum: %x\n", icmp_ptr->icmp_cksum);
         if ( sendto(sockfd, send_buff, 64, 0, 
                 (struct sockaddr *)&to_addr, sizeof(to_addr)) < 0 ) {
             perror("sendto error");
@@ -48,13 +51,15 @@ void recv_icmp(int sockfd)
     int pid             = getpid();
 
     while ( receive_count < MAX_REQUEST_COUNT ) {
-        printf("Wait...%d\n", receive_count);
+        printf("Wait...\n");
+        memset(recv_buff, 0, sizeof(recv_buff));
+        memset(&from_addr, 0, sizeof(from_addr));
+
         if ( recvfrom(sockfd, recv_buff, sizeof(recv_buff), 0, 
                 (struct sockaddr *)&from_addr, &from_addr_len) < 0 ) {
             perror("recvfrom error");
             continue;
         }
-        printf("Waiting...\n");
 
         recv_len = sizeof(recv_buff);
         struct ip *ip_ptr = (struct ip *) recv_buff;
