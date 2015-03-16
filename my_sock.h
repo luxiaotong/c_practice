@@ -10,5 +10,12 @@
 #include <sys/types.h>
 #include <errno.h>
 #include <signal.h>
+#include <sys/select.h>
+
+
+
+#define STDIN 0
+
+#define MAX(a, b) ((a > b) ? a : b)
 
 #endif
