@@ -1,11 +1,8 @@
-# my_c
-My c programs
+# My C/C++ Programs
 
-#### 1. Anagram
+### Unix Network Programming
 
-gcc anagram.c -o ana && ./ana
 
-#### 2. Seven segment display
+### C++ Tutorial for Beginners - Full Course
 
-gcc 7segment.c my_util.c -o ss && ./ss
-
+https://www.youtube.com/watch?v=vLnPwxZdW4Y&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OLZpU&index=1&t=1039s
