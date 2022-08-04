@@ -14,5 +14,18 @@ https://www.youtube.com/watch?v=B31LgI4Y4DQ&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OL
 
 #### Content
 
-* Linked List
+* List
+  * Array
+  * Linked List
+  * Doubly Linked List
 * Stack
+  * Push/Pop/Top/IsEmpty
+  * reverse string
+  * reverse linked list
+  * check balanced parenthesis
+  * infix to postfix
+  * evaluate postfix
+* Queue
+  * EnQueue/DeQueue/Front/IsEmpty/IsFull
+  * Array
+  * Linked List
