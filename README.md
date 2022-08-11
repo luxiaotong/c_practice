@@ -29,3 +29,16 @@ https://www.youtube.com/watch?v=B31LgI4Y4DQ&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OL
   * EnQueue/DeQueue/Front/IsEmpty/IsFull
   * Array
   * Linked List
+* Tree
+  * Binary Tree
+  * Binary Search Tree(BST)
+  * Traversal
+    * Breadth-first
+      * Level-order
+    * Depth-first:
+      * [**root**][left][right] Preorder
+      * [left][**root**][right] Inorder
+      * [left][right][**root**] Postorder
+  * Check if a binary tree is a BST
+  * Delete a node from BST
+  * Inorder successor in a BST
