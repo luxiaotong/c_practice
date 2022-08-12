@@ -42,3 +42,7 @@ https://www.youtube.com/watch?v=B31LgI4Y4DQ&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OL
   * Check if a binary tree is a BST
   * Delete a node from BST
   * Inorder successor in a BST
+* Graph
+  * Edge List
+  * Ajacency Matrix
+  * Ajacency List
