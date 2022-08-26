@@ -2,6 +2,8 @@
 
 ### Unix Network Programming
 
+https://github.com/unpbook/unpv13e
+
 
 ### C++ Tutorial for Beginners - Full Course
 
@@ -46,3 +48,12 @@ https://www.youtube.com/watch?v=B31LgI4Y4DQ&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OL
   * Edge List
   * Ajacency Matrix
   * Ajacency List
+
+### Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer
+
+https://www.youtube.com/watch?v=RBSGKlAvoiM&list=PLL4N9fmB41ui05L_CiSe2YcgVZC_OLZpU&index=1&t=1913s
+
+https://github.com/williamfiset/data-structures
+
+
+* Priority Queues
